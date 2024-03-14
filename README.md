@@ -1,4 +1,4 @@
-# Trend application
+# Trend application adding new line
 
 This is a small applicaiton which contains main and test folders.  
 Main contains application code.  
