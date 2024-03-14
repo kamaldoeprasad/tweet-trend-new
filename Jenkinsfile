@@ -24,17 +24,7 @@ environment {
                 sh 'mvn surefire-report:report' 
             }
         }
-        stage('SonarQube analysis') {
-        environment {
-         scannerHome = tool 'sonar-scanner'
-         }   
-        steps {
-        withSonarQubeEnv('sonarqube-server'){
-          sh "${scannerHome}/bin/sonar-scanner"
-        }
-         
-        }
-        }
+
 
             stage("Jar Publish") {
             steps {
