@@ -10,7 +10,7 @@ environment {
 }
 
     stages {
-        stage('Clone-code') {
+        stage('build') {
             steps {
                 sh 'mvn clean deploy' 
             }
@@ -19,11 +19,11 @@ environment {
         environment {
          scannerHome = tool 'sonar-scanner'
          }   
-        steps{
-          withSonarQubeEnv('sonarqube-server')
+        steps {
+        withSonarQubeEnv('sonarqube-server')
          sh "${scannerHome}/bin/sonar-scanner"
         }
-      
+        }
     }
     }
 }
