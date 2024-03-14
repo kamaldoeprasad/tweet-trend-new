@@ -29,7 +29,7 @@ environment {
 
          
         }
-        }
+        
 
             stage("Jar Publish") {
             steps {
@@ -81,4 +81,4 @@ environment {
     }
 
     
-    }
+  
